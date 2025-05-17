@@ -1,19 +1,23 @@
 name: Update IP List
 
 on:
-  workflow_dispatch:  # 允许手动触发
+  workflow_dispatch:
   schedule:
-    - cron: '0 */6 * * *'  # 每6小时自动运行一次
+    - cron: '0 */6 * * *'
 
 jobs:
   update-ip-list:
     runs-on: ubuntu-latest
     
+    permissions:  # 添加必要的权限
+      contents: write  # 允许写入仓库
+    
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        fetch-depth: 0  # 获取完整提交历史
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}  # 使用GITHUB_TOKEN认证
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -32,34 +36,30 @@ jobs:
         from urllib.parse import unquote
 
         def main():
-            # 获取配置
             url = "https://auto.858666.xyz/auto"
-            print(f"正在从 {url} 获取配置...")
-            response = requests.get(url)
+            print(f"Fetching config from {url}...")
+            response = requests.get(url, timeout=10)
             response.raise_for_status()
             
-            # 解码Base64
             try:
                 decoded = base64.b64decode(response.text).decode('utf-8')
             except Exception as e:
-                print(f"Base64解码失败: {e}")
+                print(f"Base64 decode failed: {e}")
                 exit(1)
             
-            # 提取服务器信息
             pattern = r'vless://[^@]*@([^:/]+)[:/]*(\d+)[^#]*#([^\s]+)'
             matches = re.findall(pattern, decoded)
             
             if not matches:
-                print("错误：未找到任何服务器配置")
+                print("Error: No server configs found")
                 exit(1)
                 
-            # 写入文件
             with open("iplist.txt", "w") as f:
                 for host, port, remark in matches:
-                    remark = unquote(remark)  # URL解码
+                    remark = unquote(remark)
                     f.write(f"{host}:{port}#{remark}\n")
             
-            print(f"成功提取 {len(matches)} 条服务器信息")
+            print(f"Successfully extracted {len(matches)} servers")
 
         if __name__ == "__main__":
             main()
@@ -67,25 +67,16 @@ jobs:
 
         python extract_ips.py
 
-    - name: Commit changes
+    - name: Commit and push changes
       run: |
-        # 配置Git用户
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
         
-        # 检查是否有变化需要提交
         git add iplist.txt
         if ! git diff-index --quiet HEAD --; then
-          git commit -m "自动更新IP列表 [skip ci]"
-          git push
-          echo "已提交更新"
+          git commit -m "Auto-update IP list [skip ci]"
+          git push origin HEAD:main
+          echo "Changes pushed successfully"
         else
-          echo "没有变化需要提交"
+          echo "No changes to commit"
         fi
-
-    - name: Verify changes
-      run: |
-        echo "当前文件内容:"
-        cat iplist.txt
-        echo -e "\nGit状态:"
-        git status
