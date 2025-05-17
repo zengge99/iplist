@@ -2,8 +2,6 @@ name: update daily
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 */6 * * *'
 
 jobs:
   update-ip-list:
