@@ -20,49 +20,72 @@ jobs:
       with:
         python-version: '3.10'
 
+    - name: Install dependencies
+      run: pip install requests urllib3
+
     - name: Extract and save IP list
       run: |
-        # 安装必要的依赖
-        pip install requests urllib3
-        
-        # 创建Python脚本提取IP列表
         cat << 'EOF' > extract_ips.py
         import requests
         import base64
         import re
         from urllib.parse import unquote
 
-        # 获取配置
-        url = "https://auto.858666.xyz/auto"
-        response = requests.get(url)
-        response.raise_for_status()
-        
-        # 解码Base64
-        decoded = base64.b64decode(response.text).decode('utf-8')
-        
-        # 提取服务器信息
-        pattern = r'vless://[^@]*@([^:/]+)[:/]*(\d+)[^#]*#([^\s]+)'
-        matches = re.findall(pattern, decoded)
-        
-        # 写入文件
-        with open("iplist.txt", "w") as f:
-            for host, port, remark in matches:
-                remark = unquote(remark)  # URL解码
-                f.write(f"{host}:{port}#{remark}\n")
+        def main():
+            # 获取配置
+            url = "https://auto.858666.xyz/auto"
+            print(f"正在从 {url} 获取配置...")
+            response = requests.get(url)
+            response.raise_for_status()
+            
+            # 解码Base64
+            try:
+                decoded = base64.b64decode(response.text).decode('utf-8')
+            except Exception as e:
+                print(f"Base64解码失败: {e}")
+                exit(1)
+            
+            # 提取服务器信息
+            pattern = r'vless://[^@]*@([^:/]+)[:/]*(\d+)[^#]*#([^\s]+)'
+            matches = re.findall(pattern, decoded)
+            
+            if not matches:
+                print("错误：未找到任何服务器配置")
+                exit(1)
+                
+            # 写入文件
+            with open("iplist.txt", "w") as f:
+                for host, port, remark in matches:
+                    remark = unquote(remark)  # URL解码
+                    f.write(f"{host}:{port}#{remark}\n")
+            
+            print(f"成功提取 {len(matches)} 条服务器信息")
+
+        if __name__ == "__main__":
+            main()
         EOF
 
-        # 运行Python脚本
         python extract_ips.py
 
     - name: Commit changes
       run: |
+        # 配置Git用户
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
         
-        if git diff --quiet --exit-code; then
-          echo "没有变化需要提交"
-        else
-          git add iplist.txt
+        # 检查是否有变化需要提交
+        git add iplist.txt
+        if ! git diff-index --quiet HEAD --; then
           git commit -m "自动更新IP列表 [skip ci]"
           git push
+          echo "已提交更新"
+        else
+          echo "没有变化需要提交"
         fi
+
+    - name: Verify changes
+      run: |
+        echo "当前文件内容:"
+        cat iplist.txt
+        echo -e "\nGit状态:"
+        git status
