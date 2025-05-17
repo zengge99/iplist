@@ -24,9 +24,6 @@ jobs:
       with:
         python-version: '3.10'
 
-    - name: Install dependencies
-      run: pip install requests urllib3 zip
-
     - name: Extract and save IP list
       run: |
         bash updatedaily.sh
