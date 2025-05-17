@@ -63,9 +63,9 @@ awk -F'#' '{
 curl "$SCRAPER_URL" > scraper.sh
 chmod 777 scraper.sh
 ./scraper.sh delta.txt --basic -n 3
-mv -f out/delta.txt ./
+mv -f output/delta.txt ./
 ./scraper.sh delta.txt -n 3
-mv -f out/delta.txt ./
+mv -f output/delta.txt ./
 
 for file in ../*.txt; do
     echo "正在更新文件：$file"
