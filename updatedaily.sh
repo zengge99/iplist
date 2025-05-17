@@ -70,8 +70,6 @@ mv -f output/delta.txt ./
 ./scraper.sh delta.txt -n 3
 mv -f output/delta.txt ./
 
-curl https://www2.bing.com
-
 for file in ../*.txt; do
     echo "正在更新文件：$file"
     awk -F'#' '{
