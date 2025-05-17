@@ -62,9 +62,9 @@ awk -F'#' '{
 
 curl "$SCRAPER_URL" > scraper.sh
 chmod 777 scraper.sh
-scraper.sh delta.txt --basic -n 3
+./scraper.sh delta.txt --basic -n 3
 mv -f out/delta.txt ./
-scraper.sh delta.txt -n 3
+./scraper.sh delta.txt -n 3
 mv -f out/delta.txt ./
 
 for file in ../*.txt; do
