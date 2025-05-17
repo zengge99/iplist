@@ -60,12 +60,17 @@ awk -F'#' '{
     }
 }' ../index.video.txt tg.txt > delta.txt
 
+cat delta.txt > ../index.video.txt
+cat delta.txt > ../index.daily.txt
+
 curl "$SCRAPER_URL" > scraper.sh
 chmod 777 scraper.sh
 ./scraper.sh delta.txt --basic -n 3
 mv -f output/delta.txt ./
 ./scraper.sh delta.txt -n 3
 mv -f output/delta.txt ./
+
+curl https://www2.bing.com
 
 for file in ../*.txt; do
     echo "正在更新文件：$file"
