@@ -70,7 +70,10 @@ jobs:
 
         cat << 'EOF' > fetch_fan.sh
         touch fan.txt.bak
-        curl -L "http://www.饭太硬.com/tv" | grep -Pao "\*\*.*$" | sed 's/^\*\*//' | base64 --decode | sed 's|^\s*//.*$||g' | jq '.' > fan.txt
+        curl -L "http://www.饭太硬.com/tv" | grep -Pao "\*\*.*$" | sed 's/^\*\*//' | base64 --decode | sed 's|^\s*//.*$||g' | jq '.' > fan.txt.bak
+        if cat fan.txt.bak | grep -q "spider"; then
+          mv fan.txt.bak fan.txt
+        fi
         EOF
         bash fetch_fan.sh
 
