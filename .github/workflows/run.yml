@@ -66,9 +66,9 @@ jobs:
             main()
         EOF
 
-        python extract_ips.py
+        #python extract_ips.py
 
-        curl -L "http://www.饭太硬.com/tv" -o fan.txt
+        curl -L "http://www.饭太硬.com/tv" | grep -Po "\*\*.*$" > fan.txt
 
     - name: Commit and push changes
       run: |
