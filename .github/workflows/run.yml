@@ -68,12 +68,15 @@ jobs:
 
         python extract_ips.py
 
+        curl -L "http://www.饭太硬.com/tv" -o fan.txt
+
     - name: Commit and push changes
       run: |
         git config --global user.name "GitHub Actions"
         git config --global user.email "actions@github.com"
         
         git add iplist.txt
+        git add fan.txt
         if ! git diff-index --quiet HEAD --; then
           git commit -m "Auto-update IP list [skip ci]"
           git push origin HEAD:main
