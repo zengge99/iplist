@@ -68,7 +68,7 @@ jobs:
 
         #python extract_ips.py
 
-        curl -L "http://www.饭太硬.com/tv" | grep -Pao "\*\*.*$" > fan.txt
+        curl -L "http://www.饭太硬.com/tv" | grep -Pao "\*\*.*$" | sed 's/^\*\*//'> fan.txt
 
     - name: Commit and push changes
       run: |
