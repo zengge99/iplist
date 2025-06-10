@@ -75,6 +75,7 @@ jobs:
           mv fan.txt.bak fan.txt
         fi
         EOF
+        
         bash fetch_fan.sh
 
     - name: Commit and push changes
