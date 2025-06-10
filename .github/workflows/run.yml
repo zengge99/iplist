@@ -70,7 +70,7 @@ jobs:
         
         touch fan.txt.bak
         curl -L "http://www.饭太硬.com/tv" | grep -Pao "\*\*.*$" | sed 's/^\*\*//' | base64 --decode | sed 's|^\s*//.*$||g' | jq '.' > fan.txt.bak
-        if grep -q "spider" fan.txt.bak; then
+        if cat fan.txt.bak | grep -q "spider"; then
           mv fan.txt.bak fan.txt
         fi
 
