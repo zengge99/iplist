@@ -16,6 +16,53 @@ pulltgupdate() {
     CHANNEL="xiaoya_media"
     BASE_URL="https://t.me/s/$CHANNEL"
     current_url="$BASE_URL"
+    two_days_ago=$(date -d "2 days ago" +%s)
+    stop_processing=false
+
+    for ((page=1; page<=10 && ! $stop_processing; page++)); do
+        if [ $page != 1 ]; then
+            before_param=$(echo "$page_content" | grep -oP '<link rel="prev" href="[^"]*before=\K[^"]+')
+            [ -z "$before_param" ] && { echo "无法获取翻页参数，终止爬取"; break; }
+            current_url="$BASE_URL?before=$before_param"
+        else
+            current_url="$BASE_URL"
+        fi
+
+        echo -e "\n====== 第${page}页 ======" >&2
+        page_content=$(curl -s "$current_url")
+        
+        # 提取消息时间戳并转换为Unix时间戳
+        timestamps=$(echo "$page_content" | grep -oP 'data-time="\K[^"]+' | while read ts; do echo $ts; done)
+        
+        # 处理每条消息
+        while IFS= read -r line; do
+            # 获取消息时间戳
+            msg_timestamp=$(echo "$timestamps" | sed -n "${line}p")
+            msg_date=$(date -d "@$msg_timestamp" +%s)
+            
+            # 如果消息超过2天，设置停止标志并跳过处理
+            if [ $msg_date -lt $two_days_ago ]; then
+                stop_processing=true
+                continue
+            fi
+            
+            # 处理消息内容
+            echo "$page_content" | awk -v line="$line" 'NR==line' | \
+            paste -d "#" \
+            <(grep -oP '<a [^>]*rel="noopener"[^>]*>\K[^<]+' | grep "xiaoya\.host" | sed 's|http://xiaoya.host:5678/|./|g') \
+            <(grep -oP '<div class="tgme_widget_message_text[^>]*>\K[^<]+') | \
+            awk -F'#' 'length($2) > 20 {print $1} length($2) <= 20 {print $0}' | urldecode
+            
+        done < <(echo "$page_content" | grep -n '<div class="tgme_widget_message_text' | cut -d: -f1)
+
+        sleep 1 
+    done
+}
+
+_pulltgupdate() {
+    CHANNEL="xiaoya_media"
+    BASE_URL="https://t.me/s/$CHANNEL"
+    current_url="$BASE_URL"
 
     for ((page=1; page<=10; page++)); do
         if [ $page != 1 ]; then
