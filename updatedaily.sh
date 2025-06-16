@@ -38,7 +38,7 @@ pulltgupdate() {
         while IFS= read -r line; do
             # 获取消息时间戳
             msg_timestamp=$(echo "$timestamps" | sed -n "${line}p")
-            msg_date=$(date -d "@$msg_timestamp" +%s)
+            msg_date=$(date -d "$msg_timestamp" +%s)
             
             # 如果消息超过2天，设置停止标志并跳过处理
             if [ $msg_date -lt $two_days_ago ]; then
