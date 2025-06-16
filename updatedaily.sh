@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SCRAPER_URL="https://xxx/scrap_tvbox.sh"
+SCRAPER_URL="https://xiaoyahelper.ddsrem.com/scrap_tvbox.sh"
 
 urldecode() {
     local input
