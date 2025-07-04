@@ -665,7 +665,7 @@
     {
       "name": "V6范明明（需开启V6网络）",
       "type": 0,
-      "url": "https://www.58fuke.com/download/temp/20250701/1751360224_7_dc31728d_9b1c_45b3_a3ed_a96c987dd824.m3u",
+      "url": "https://scrm-community.oss-cn-shenzhen.aliyuncs.com/miniso-vendor/20250425-868403-298462cec53c48439a5765ceaca3c67f.m3u",
       "playerType": 2
     },
     {
