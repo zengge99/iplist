@@ -649,7 +649,7 @@
       "playerType": 2,
       "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
       "logo": "https://11.112114.xyz/logo/{name}.png",
-      "ua": "okHttp/Mursor-1.0.0"
+      "ua": "okHttp/Mod-1.0.0"
     },
     {
       "name": "V6-范明明（需开启V6网络）",
