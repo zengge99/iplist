@@ -66,11 +66,11 @@ jobs:
             main()
         EOF
 
-        # python extract_ips.py
-        data="$(curl https://bestip.1996999.xyz/https://wvsvlees.sosorg.nyc.mn/SOSO | grep -oP '^[^#]*#[^🌐🐲]*' | sed 's/[[:space:]]*$//')"
-        if [ "$data"x != x ]; then
-            echo "$data" > iplist.txt
-        fi
+        python extract_ips.py
+        # data="$(curl https://bestip.1996999.xyz/https://wvsvlees.sosorg.nyc.mn/SOSO | grep -oP '^[^#]*#[^🌐🐲]*' | sed 's/[[:space:]]*$//')"
+        # if [ "$data"x != x ]; then
+        #    echo "$data" > iplist.txt
+        # fi
 
         cat << 'EOF' > fetch_fan.sh
         touch fan.txt.bak
