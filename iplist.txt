@@ -1,7 +1,9 @@
 www.visa.com.tw:443#官方
+cf.877774.xyz:443#官方
 hk.cf.090227.xyz:443#官方
 ip.sb:443#官方
 skk.moe:443#官方
+cloudflare.182682.xyz:443#官方
 ipv4.speedu.eu.org:1234#官方
 61.220.128.226:43#TW
 47.238.93.164:443#HK
