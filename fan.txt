@@ -623,13 +623,12 @@
   "logo": "https://cdn.wmpvp.com/steamWeb/B96F868DE45B45D690B5F9F490D0BC60-1745866248445.gif",
   "lives": [
     {
-      "name": "V4-mursor（卡顿请换源）",
+      "name": "V4-IPTV（卡顿请左右换源）",
       "type": 0,
-      "url": "https://sub.ottiptv.cc/iptv.m3u",
+      "url": "https://livetv.izbds.com/tv/iptv6.m3u",
       "playerType": 2,
       "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
-      "logo": "https://11.112114.xyz/logo/{name}.png",
-      "ua": "okHttp/Mod-1.3.0.0"
+      "logo": "https://11.112114.xyz/logo/{name}.png"
     },
     {
       "name": "V6-范明明（需开启V6网络）",
