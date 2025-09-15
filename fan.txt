@@ -625,7 +625,7 @@
     {
       "name": "V4-IPTV（卡顿请左右换源）",
       "type": 0,
-      "url": "https://livetv.izbds.com/tv/iptv6.m3u",
+      "url": "https://gh-proxy.com/raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u",
       "playerType": 2,
       "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}",
       "logo": "https://11.112114.xyz/logo/{name}.png"
