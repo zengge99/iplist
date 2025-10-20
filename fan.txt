@@ -1,10 +1,10 @@
 {
-  "spider": "https://oss4liview.moji.com/thd_file/2025/10/20/5f719641963482656d8d2ecefcd6c6b2.jpg;md5;9ea2dd2677c24cb6407606818e1eb253",
+  "spider": "https://oss4liview.moji.com/thd_file/2025/10/21/98a4dc6f4576915ba19f381f5789e262.jpg;md5;ae66555429c1a4e321617ddbb1caa7f3",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "sites": [
     {
       "key": "豆",
-      "name": "更新我的云盘和弹幕，看公众号教程【神秘的哥哥们】",
+      "name": "更新我的云盘和蛋幕，看教程【神秘的哥哥们】",
       "type": 3,
       "api": "csp_DouDouGuard",
       "indexs": 1,
