@@ -1,5 +1,5 @@
 {
-  "spider": "https://oss4liview.moji.com/thd_file/2025/10/20/b3effd4b32d2c0000cb7fe3c92bffb9a.jpg;md5;0b26306733eda1907767328af0a2abe6",
+  "spider": "https://95580.psbc.com:9098/upload/05/853af285f70cddac3ca7d3c3e199cb693bc8deac.jpg;md5;eb461e37e30dcb156ccb69f73daea475",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "sites": [
     {
@@ -39,8 +39,7 @@
       "ext": {
         "Cloud-drive": "tvfan/Cloud-drive.txt",
         "from": "4k|auto",
-        "siteUrl": "https://www.wogg.com/",
-        "danMu": "弹"
+        "siteUrl": "https://www.wogg.one/"
       }
     },
     {
