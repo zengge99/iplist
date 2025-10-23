@@ -1,7 +1,8 @@
-www.visa.com.tw:443#官方
+www.visa.com.hk:443#官方
 cf.877774.xyz:443#官方
 hk.cf.090227.xyz:443#官方
 cloudflare-ip.mofashi.ltd:443#官方
+cnamefuckxxs.yuchen.icu:443#官方
 cf.zhetengsha.eu.org:443#官方
 cf.0sm.com:443#官方
 cdn.tzpro.xyz:443#官方
