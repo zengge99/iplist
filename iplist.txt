@@ -3,7 +3,7 @@ staticdelivery.nexusmods.com:443#官方
 saas.sin.fan:443#官方
 www.shopify.com:443#官方
 mfa.gov.ua:443#官方
-store.ubi.com:443#官方cf.877774.xyz
+cf.877774.xyz:443#官方
 hk.cf.090227.xyz:443#官方
 cloudflare-ip.mofashi.ltd:443#官方
 cnamefuckxxs.yuchen.icu:443#官方
