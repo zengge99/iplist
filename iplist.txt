@@ -1,5 +1,9 @@
-www.visa.com.hk:443#官方
-cf.877774.xyz:443#官方
+store.ubi.com:443#官方
+staticdelivery.nexusmods.com:443#官方
+saas.sin.fan:443#官方
+www.shopify.com:443#官方
+mfa.gov.ua:443#官方
+store.ubi.com:443#官方cf.877774.xyz
 hk.cf.090227.xyz:443#官方
 cloudflare-ip.mofashi.ltd:443#官方
 cnamefuckxxs.yuchen.icu:443#官方
@@ -10,11 +14,8 @@ freeyx.cloudflare88.eu.org:443#官方
 bestcf.top:443#官方
 cdn.2020111.xyz:443#官方
 cfip.1323123.xyz:443#官方
-ip.sb:443#官方
-skk.moe:443#官方
 cloudflare.182682.xyz:443#官方
 ipv4.speedu.eu.org:1234#官方
-61.220.128.226:43#TW
 154.211.8.18:2083#US
 154.211.8.152:2053#US
 154.211.8.109:2087#US
