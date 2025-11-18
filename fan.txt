@@ -65,10 +65,10 @@
       "name": "💡聚剧剧┃三盘",
       "type": 3,
       "api": "csp_SeedhubGuard",
-      "changeable": 0,
       "ext": "5++kwLhNYm9UrO9wh7Dl7eKamTee4s/5",
       "searchable": 1,
       "quickSearch": 1,
+      "changeable": 0,
       "indexs": 0,
       "style": {
         "type": "list"
@@ -125,7 +125,7 @@
       "name": "☀原创┃秒播",
       "type": 3,
       "api": "csp_YCyzGuard",
-      "timeout": 30,
+      "timeout": 15,
       "playerType": 1,
       "searchable": 1,
       "quickSearch": 1,
@@ -148,8 +148,8 @@
       "api": "csp_JqqGuard",
       "timeout": 10,
       "searchable": 1,
-      "quickSearch": 0,
-      "changeable": 0
+      "quickSearch": 1,
+      "changeable": 1
     },
     {
       "key": "下饭",
@@ -158,7 +158,7 @@
       "api": "csp_AppSxGuard",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1,
+      "changeable": 1,
       "ext": "rfOX1voDIQhH8epBwpmIsuStuSyZxtH332ksdImjS1xHcE9fpWVy8fNjc+8DhNI67j3SJZRGjnM="
     },
     {
@@ -168,7 +168,7 @@
       "api": "csp_AppSxGuard",
       "searchable": 1,
       "quickSearch": 1,
-      "filterable": 1,
+      "changeable": 1,
       "ext": "rfOX1voDIQhH8epBwpmIsuS/sSCZz8r+wzZkfJbkFR5FJ1EK9mVu7apib64Gl8ND6FCETepkkEhht0ptIq9qCQ=="
     },
     {
