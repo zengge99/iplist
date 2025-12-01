@@ -1,10 +1,10 @@
 {
-  "spider": "https://oss4liview.moji.com/thd_file/2025/11/28/6b765637d974223e1dddaaef872d0191.jpg;md5;403a59bd559cc36fe67544e5de66e774",
+  "spider": "https://oss4liview.moji.com/thd_file/2025/12/01/f7ce2781c5d7f77aedd34b953171fbe4.jpg;md5;af42cd672e47918790156487751cdf46",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "sites": [
     {
       "key": "豆",
-      "name": "完美修复，新号【太太太硬了】",
+      "name": "原公众号已寄，新号【太太太硬了】",
       "type": 3,
       "api": "csp_DouDouGuard",
       "indexs": 1,
@@ -13,7 +13,7 @@
       "changeable": 0
     },
     {
-      "key": "MyDrive",
+      "key": "Drive",
       "name": "🗂我的云盘┃我配置",
       "type": 3,
       "api": "csp_MyDriveGuard",
