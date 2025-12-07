@@ -1,10 +1,10 @@
 {
-  "spider": "https://oss4liview.moji.com/thd_file/2025/12/05/cf6a115ed77bcf1065441a7b73ec8e84.jpg;md5;6f66d4afc311f0535d76d64139879013",
+  "spider": "https://oss4liview.moji.com/thd_file/2025/12/07/572a7f8c53797024586e6323a765802e.jpg;md5;4685db8d54e6ab9d04d635e3666f230e",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "sites": [
     {
       "key": "豆豆",
-      "name": "关注新公众号【太太太硬了】防失联",
+      "name": "强化过滤广告，新公众号【太太太硬了】",
       "type": 3,
       "api": "csp_DouDouGuard",
       "indexs": 1,
