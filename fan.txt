@@ -1,10 +1,10 @@
 {
-  "spider": "https://oss4liview.moji.com/thd_file/2025/12/17/faca098ca4fe96a3f3e47bbbb73d07d2.jpg;md5;22e6df3e588c53547acea1ef554505a8",
+  "spider": "https://oss4liview.moji.com/thd_file/2025/12/17/f1ed874619a1f75d84cb7027e460300a.jpg;md5;b193ac42935106726430b09785566f60",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "sites": [
     {
       "key": "豆豆",
-      "name": "修复虎牙，新公众号【太太太硬了】",
+      "name": "修复进入自己网盘，新公众号【太太太硬了】",
       "type": 3,
       "api": "csp_DouDouGuard",
       "indexs": 1,
