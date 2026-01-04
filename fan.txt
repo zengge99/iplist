@@ -1,5 +1,5 @@
 {
-  "spider": "https://oss4liview.moji.com/thd_file/2026/01/04/e45d7eb1cecead58dd5aca7e089dadf6.jpg;md5;b7984b5d50fae03a99977b515deb00b2",
+  "spider": "https://oss4liview.moji.com/thd_file/2026/01/04/3aa1c018f51a14055a1e863ee888f1b6.jpg;md5;43ef8d5402a9680965e53900c3036b10",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "sites": [
     {
@@ -83,7 +83,7 @@
       "quickSearch": 0,
       "changeable": 0,
       "ext": {
-        "siteUrl": "https://api.jkai.de/"
+        "siteUrl": "https://pansou.591668.xyz/"
       },
       "indexs": 0,
       "style": {
