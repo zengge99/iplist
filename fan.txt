@@ -51,16 +51,6 @@
       "changeable": 0
     },
     {
-      "key": "alllive",
-      "name": "🎮一直播┃直播",
-      "type": 3,
-      "api": "csp_AllliveGuard",
-      "searchable": 1,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": "uqGL1fpJNAUH7axYx5bf4OWuvyk="
-    },
-    {
       "key": "seed",
       "name": "💡聚剧剧┃三盘",
       "type": 3,
@@ -83,7 +73,7 @@
       "quickSearch": 0,
       "changeable": 0,
       "ext": {
-        "siteUrl": "https://pansou.591668.xyz/"
+        "siteUrl": "https://so.252035.xyz/"
       },
       "indexs": 0,
       "style": {
@@ -399,6 +389,22 @@
       }
     },
     {
+      "key": "虎牙js",
+      "name": "🐯虎牙┃直播",
+      "type": 3,
+      "api": "https://gh-proxy.com/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
+      "ext": "https://gh-proxy.com/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/虎牙.js",
+      "style": {
+        "type": "rect",
+        "ratio": 1.755
+      },
+      "timeout": 10,
+      "playerType": "2",
+      "searchable": 1,
+      "quickSearch": 0,
+      "changeable": 0
+    },
+    {
       "key": "斗鱼js",
       "name": "🐟斗鱼┃直播",
       "type": 3,
@@ -410,7 +416,7 @@
       },
       "timeout": 10,
       "playerType": "2",
-      "searchable": 0,
+      "searchable": 1,
       "quickSearch": 0,
       "changeable": 0
     },
