@@ -1,10 +1,10 @@
 {
-  "spider": "https://oss4liview.moji.com/thd_file/2026/01/10/233b0eee5840dc2c01b8a154e9d572bb.jpg;md5;72d5157673877b07566a97f11c4761df",
+  "spider": "https://oss4liview.moji.com/thd_file/2026/01/12/0a7fcca25f35b87c5659a4c83c6fd152.jpg;md5;323e8b50197207b7fcccfa8a636da143",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "sites": [
     {
       "key": "豆",
-      "name": "新公众号【太太太硬了】",
+      "name": "修复所有，新公众号【太太太硬了】",
       "type": 3,
       "api": "csp_DouDouGuard",
       "indexs": 1,
