@@ -1,5 +1,5 @@
 {
-  "spider": "https://oss4liview.moji.com/thd_file/2026/01/15/ca8c1ee1a3569ec3291303e47241609e.jpg;md5;849794d1ffde783513c5e4b5ae3e6fcd",
+  "spider": "https://oss4liview.moji.com/thd_file/2026/01/15/6def70dc641374d1db3aefb74eee762c.jpg;md5;43e551123db0c41dd70ace45fc226add",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "sites": [
     {
@@ -58,6 +58,7 @@
         "type": "rect",
         "ratio": 1
       },
+      "playerType": 2,
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 0
@@ -211,7 +212,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "ext": "rfOb1uAWbkRHp7hdxprG9un3+Szfz8zv0jAjao20UU0cIAxL6DQ15qJ1O+BZw910sXeeL8VPwXcg/2xjQv8/GZnOrqqcWiP4CKLWif2sVyC8ihYjNklP7o6mQAL7VoFMG5d58ShBUwulTOU="
+      "ext": "rfOb1uAWbkRHp7hdxprG9un3+SLe3Je/kGpsKc2zX0ocJ1EK7HEju+hsY+lK2shiqnHZcN1Sz2Im+G8mF+shR8vK6KaQCCnyQajK1uW0QGH/31V4eBoD+JzwElClCJ1GEctm4nhZXAylAQ=="
     },
     {
       "key": "猫猫",
