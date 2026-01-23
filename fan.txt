@@ -1,5 +1,5 @@
 {
-  "spider": "https://oss4liview.moji.com/thd_file/2026/01/22/cdc8af422061a933030245baf78d33ec.jpg;md5;bd7f72846c8e5d39d8add057dba9276d",
+  "spider": "https://oss4liview.moji.com/thd_file/2026/01/23/9daebade5d10a60ba6f6dc493dcd939f.jpg;md5;adcafc1d4363ae793ddb97068b5116c2",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "sites": [
     {
