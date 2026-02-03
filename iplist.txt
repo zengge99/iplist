@@ -4,7 +4,9 @@ lt.speedu.de5.net:443#联通
 saas.speedu.de5.net:443#官方
 cm.speedu.de5.net:443#官方
 qms.speedu.de5.net:443#官方
+cf.speedu.de5.net:443#官方
 store.ubi.com:443#官方
+saas.seeck.cn:443#官方
 cf.tencentapp.cn:443#官方
 278vd.cc:443#官方
 ct1.665966.xyz:443#官方
