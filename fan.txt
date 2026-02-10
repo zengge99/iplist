@@ -160,16 +160,6 @@
       "changeable": 1
     },
     {
-      "key": "苹果",
-      "name": "🍎苹果┃秒播",
-      "type": 3,
-      "api": "csp_LiteAppleGuard",
-      "timeout": 10,
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1
-    },
-    {
       "key": "热播",
       "name": "📺热播┃多线",
       "type": 3,
@@ -628,7 +618,8 @@
       "type": 0,
       "url": "https://gh.llkk.cc/http://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt",
       "playerType": 2,
-      "epg": "http://epg.51zmt.top:8000/api/diyp/?ch={name}&date={date}"
+      "epg": "http://diyp5.112114.xyz/?ch={name}&date={date}",
+      "logo": "https://epg.112114.xyz/logo/{name}.png"
     },
     {
       "name": "冰 茶",
