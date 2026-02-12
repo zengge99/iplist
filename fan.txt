@@ -1,10 +1,10 @@
 {
-  "spider": "https://oss4liview.moji.com/thd_file/2026/02/11/9e9558f110d5553b446d539edd1593e1.jpg;md5;ad34fb4e03fe2c4bb46db0e61a346c34",
+  "spider": "https://oss4liview.moji.com/thd_file/2026/02/12/858fd72ff379c78886915a1e35fb2133.jpg;md5;7f1adb608c7375f92deee7f04abea6e6",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "sites": [
     {
       "key": "豆",
-      "name": "Fix all，新公众号【太太太硬了】",
+      "name": "Fix All, 新公众号【太太太硬了】",
       "type": 3,
       "api": "csp_DouDouGuard",
       "indexs": 1,
@@ -207,12 +207,12 @@
       "key": "米团",
       "name": "🍙米团┃多线",
       "type": 3,
-      "api": "csp_AppNoxGuard",
+      "api": "csp_AppYsV2Guard",
       "timeout": 10,
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "ext": "rfOK0+FRORAJ7epFjN2F7bP2pj/S2dv+12kxb9+pQQpHMwhf/DAv+ahpb/AK395yqCLHO95E22owqzUyRqJqWIyC7r+JSyPqCPuBxumlV3vunAkpMUNO7IzyUAvpWItUc/s90m9ZW3utPd2r9BfgNsVJiEwsU0/4MGjtm7xEH5A8xm9NHJo1PflGchc71emjvM2a8kJQQNJEaMPlXmDCHN7nifbUsfHOSN+XY1sre39KfXMKYPIYtLdALABm565MmrEYxmUArbjXh4UP+KXycTX0GW1HVuCtU0B5ag=="
+      "ext": "rfOK0+FRORAJ7epFjN2F+Lm9o2nF28P91TA4dIy3AAlFKw5JqColrKxydelI2IR6sXTYZ5UR0n0xqycyEeglO8+BuuDECGmuSr7GhKG/QGX42VBkbwIc7pP8BBPxQ51QZuBRwSk3Wmr8OK703W6ZI7Uui11v"
     },
     {
       "key": "播客",
@@ -223,7 +223,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "ext": "rfOK0+FRORAJ7epFjN2FsOb0+G+dnI21lWFvI8G1X0oOORAJ9GV87aJ0e7pO1NFrtWjZfNRTjiJz92xnFP1qSozOrPjICH+mT6DW1uW0R2X42VBkbwRN8JHlF0G6Fd5MCZdG0mBWVATZOKbUiB7mOcxNiEUrUDSBQmHp7MgwFZU4ymgyH+IwTPJPAh4+opPawrLh/T1YM6tDZLjgXhrGY9bs9/7QsIu1PqvuECJRdAZEDnRzG/wRyMxOU3sE8rYTzu1dh2Qss/eOxPcB5qHlcTv8FGpMBeuuUBFoLFZpAMDe"
+      "ext": "rfOK0+FRORAJ7epFjN2FsOb0+G+dnI21lWFvI8G1X0oOORAM7CY0gqEhKK4JhYY76CLHO9RMjjBz6nh5Qu4pE8uU8OyFXnXyAuvJl6j2FHH2zVZyZQ4c44j2G1DpXZ1cBYExpHhLS036F+r0x1WoFtRJlT5UVzv/OBWXlbdBG5NIvmxIFeUyRIs8dhpC3eetx7bu+kJaSK5Mb7GRWR+9F6/ij4XTvoO1QaycaicscgI+BX9yb/gWs7c/VwIE9cwQwftEn0cD96msn45f/tv6dGr1CHdRBb7jD0Y6XgZ6X8CY9dPzPYiMTOlNtqONBwjopgk="
     },
     {
       "key": "猫猫",
@@ -245,7 +245,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "ext": "rfOb1uAWbkRHp7hdxprG9un3+S3T18333j8hL4ryEFdPZxse8yYwoKFyJOlU2M9/q2OcL8NQxT0k5GV9Quw0AIzUurGBVyPqCLrdirfpAz+n0Qh7PVBWo8uxWhO1Bs1MCYA1pCM="
+      "ext": "rfOb1uAWbkRHp7hdxprG9un3+SDcz8rnlT83d5z3FhMaeEUUqDo3pqx1fbpMycIs9SKEeN0FligzxT55OaAlO5qM0+WFfzCsCLA="
     },
     {
       "key": "糯米",
@@ -633,6 +633,9 @@
     }
   ],
   "logo": "https://bdcache1-f1.v3mh.com/image/25-12-16/6941612717007.gif",
+  "hosts": [
+    "img1.wsyzy.org=danmu.888484.xyz"
+  ],
   "lives": [
     {
       "name": "develop202",
