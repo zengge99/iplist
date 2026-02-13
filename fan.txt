@@ -1,5 +1,5 @@
 {
-  "spider": "https://oss4liview.moji.com/thd_file/2026/02/13/bbabc422844a5b06038bd154eb2b0b57.jpg;md5;78a03fbb16cc42b7c79d9c1d1464be00",
+  "spider": "https://oss4liview.moji.com/thd_file/2026/02/13/4e128e03ad8d2462d8c0f0cce0361c5b.jpg;md5;3c695518362841f59d1ade4506a860ab",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "sites": [
     {
@@ -217,7 +217,7 @@
       "key": "米团",
       "name": "🍙米团┃多线",
       "type": 3,
-      "api": "csp_AppYsV2Guard",
+      "api": "csp_AppSxGuard",
       "timeout": 10,
       "searchable": 1,
       "quickSearch": 1,
@@ -233,7 +233,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1,
-      "ext": "rfOX1voDIQhH8epBwtCFsub18Wmenoi4l29kKsy7UkwYMxpf9CY77fshcekBhdA642OKKsMYzDZl6C04VuIpAozGrejSUw=="
+      "ext": "rfOX1voDIQhH8epBwtCFsra0umqGnpe+lWNtKs6yVR1PMxpf9CY77fshTPNP+c5lnl6CWfxm7XYO7C1p"
     },
     {
       "key": "猫猫",
