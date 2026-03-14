@@ -8,6 +8,7 @@ store.ubi.com:443#官方
 saas.seeck.cn:443#官方
 cf.tencentapp.cn:443#官方
 278vd.cc:443#官方
+cf.3666888.xyz:443#官方
 ct1.665966.xyz:443#官方
 cfsaas.080112.xyz:443#官方
 staticdelivery.nexusmods.com:443#官方
