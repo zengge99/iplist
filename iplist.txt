@@ -14,7 +14,6 @@ staticdelivery.nexusmods.com:443#官方
 www.shopify.com:443#官方
 mfa.gov.ua:443#官方
 cloudflare-ip.mofashi.ltd:443#官方
-cloudflare-dl.byoip.top:443#官方
 cf.zhetengsha.eu.org:443#官方
 cf.0sm.com:443#官方
 freeyx.cloudflare88.eu.org:443#官方
