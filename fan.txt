@@ -1,5 +1,5 @@
 {
-  "spider": "https://oss4liview.moji.com/thd_file/2026/03/27/1612f09ddf31e69b00c273c76e53e54f.jpg;md5;96ea56039dad3f4c0438f9b1f949a66a",
+  "spider": "https://oss4liview.moji.com/thd_file/2026/04/09/66c49607560d8487a4ca1d387d7311af.jpg;md5;596fe0f8b20d34e041cb3727b64ec13e",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "sites": [
     {
@@ -65,7 +65,7 @@
     },
     {
       "key": "seed",
-      "name": "💡聚剧剧┃三盘",
+      "name": "💡聚剧剧┃四盘",
       "type": 3,
       "api": "csp_SeedhubGuard",
       "ext": "5++kwLhNYm9UrO9wh7Dl7eKamTee4s/5",
@@ -79,7 +79,7 @@
     },
     {
       "key": "ZPan",
-      "name": "🎈聚盘搜┃三盘",
+      "name": "🎈聚盘搜┃四盘",
       "type": 3,
       "api": "csp_S_zpsGuard",
       "searchable": 1,
@@ -468,7 +468,7 @@
     },
     {
       "key": "米搜",
-      "name": "🦋米搜┃优夸",
+      "name": "🦋米搜┃夸嘟",
       "type": 3,
       "api": "csp_MIPanSoGuard",
       "searchable": 1,
