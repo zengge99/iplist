@@ -1,10 +1,10 @@
 {
-  "spider": "https://oss4liview.moji.com/thd_file/2026/04/09/66c49607560d8487a4ca1d387d7311af.jpg;md5;596fe0f8b20d34e041cb3727b64ec13e",
+  "spider": "https://oss4liview.moji.com/thd_file/2026/04/14/02977100989fb1efe350162e86dc4178.jpg;md5;aea4127857924d97c4ba44a4cdde4818",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "sites": [
     {
       "key": "点我切源",
-      "name": "新公众号【太太太硬了】",
+      "name": "新增嘟嘟盘，到【太太太硬了】领免费容量",
       "type": 3,
       "api": "csp_DouDouGuard",
       "indexs": 1,
@@ -170,6 +170,16 @@
       "changeable": 1
     },
     {
+      "key": "糯米",
+      "name": "🍓糯米┃多线",
+      "type": 3,
+      "api": "csp_NmyswvGuard",
+      "timeout": 15,
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1
+    },
+    {
       "key": "热播",
       "name": "📺热播┃多线",
       "type": 3,
@@ -180,16 +190,6 @@
       "quickSearch": 1,
       "changeable": 1,
       "ext": "uqGL1bNENExT7/hGxpSE5qU="
-    },
-    {
-      "key": "糯米",
-      "name": "🍓糯米┃多线",
-      "type": 3,
-      "api": "csp_NmyswvGuard",
-      "timeout": 15,
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1
     },
     {
       "key": "剧圈",
@@ -333,7 +333,7 @@
     },
     {
       "key": "88",
-      "name": "⚽88┃看球",
+      "name": "⚽八八┃看球",
       "type": 3,
       "api": "csp_Sir88Guard",
       "timeout": 10,
@@ -345,16 +345,15 @@
     },
     {
       "key": "超全",
-      "name": "⚽超全┃看球",
+      "name": "⚽吃瓜┃看球",
       "type": 3,
-      "api": "csp_ZbzGuard",
+      "api": "csp_LiveGzGuard",
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0,
       "style": {
         "type": "list"
-      },
-      "ext": "uqGL1fpJNAUf8fdTwZCE5qSp+Q=="
+      }
     },
     {
       "key": "看球",
