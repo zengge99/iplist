@@ -1,5 +1,5 @@
 {
-  "spider": "https://oss4liview.moji.com/thd_file/2026/05/08/b216ded4a854a190ce9f6bd280aff779.jpg;md5;448a9f26f33109f6aa148971c3adab46",
+  "spider": "https://oss4liview.moji.com/thd_file/2026/05/14/7443fdcc54d4aebef5998487590ed758.jpg;md5;0370a162a1edc618a5fe426160f8cf89",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "sites": [
     {
@@ -113,7 +113,8 @@
       "quickSearch": 1,
       "changeable": 1,
       "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt"
+        "Cloud-drive": "tvfan/Cloud-drive.txt",
+        "siteUrl": "https://www.libvio.run"
       }
     },
     {
@@ -612,17 +613,8 @@
       }
     },
     {
-      "key": "fan",
-      "name": "导航 www.饭太硬.com",
-      "type": 3,
-      "api": "csp_XPathGuard",
-      "searchable": 1,
-      "quickSearch": 0,
-      "changeable": 0
-    },
-    {
       "key": "cc",
-      "name": "请勿相信视频中广告",
+      "name": "请勿相信视频中任何广告",
       "type": 3,
       "api": "csp_XPathGuard",
       "searchable": 1,
