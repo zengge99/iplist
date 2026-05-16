@@ -1,10 +1,10 @@
 {
-  "spider": "https://oss4liview.moji.com/thd_file/2026/05/14/7443fdcc54d4aebef5998487590ed758.jpg;md5;0370a162a1edc618a5fe426160f8cf89",
+  "spider": "https://oss4liview.moji.com/thd_file/2026/05/16/5b36899adb4d8ec14789e8f0efbee0f5.jpg;md5;0fbc678a0d45eb6ef3efee883d5167bf",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "sites": [
     {
       "key": "点我切源",
-      "name": "新增嘟嘟盘，到【太太太硬了】领免费容量",
+      "name": "嘟嘟盘容量，到【太太太硬了】领取",
       "type": 3,
       "api": "csp_DouDouGuard",
       "indexs": 1,
@@ -614,7 +614,7 @@
     },
     {
       "key": "cc",
-      "name": "请勿相信视频中任何广告",
+      "name": "请勿信视频中任何广告",
       "type": 3,
       "api": "csp_XPathGuard",
       "searchable": 1,
