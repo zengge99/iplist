@@ -1,5 +1,5 @@
 {
-  "spider": "https://file.icve.com.cn/file_doc/905/76/E25131330E48E729864434147C857F41.jpg;md5;e25131330e48e729864434147c857f41",
+  "spider": "https://file.icve.com.cn/file_doc/292/340/4905535609A9C0CE9CC2F652D6D90BDA.jpg;md5;4905535609a9c0ce9cc2f652d6d90bda",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "sites": [
     {
@@ -328,18 +328,6 @@
       "api": "csp_LiveGzGuard",
       "searchable": 0,
       "quickSearch": 0,
-      "changeable": 0,
-      "style": {
-        "type": "list"
-      }
-    },
-    {
-      "key": "看球",
-      "name": "⚽手机┃看球",
-      "type": 3,
-      "api": "csp_KanqiuGuard",
-      "timeout": 10,
-      "searchable": 0,
       "changeable": 0,
       "style": {
         "type": "list"
