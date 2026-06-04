@@ -1,5 +1,5 @@
 {
-  "spider": "https://file.icve.com.cn/file_doc/614/380/99A5F056016659A7CF390A22612182EA.jpg;md5;99a5f056016659a7cf390a22612182ea",
+  "spider": "https://file.icve.com.cn/file_doc/788/735/C50B7DDAF597139120718BE046239DAB.jpg;md5;c50b7ddaf597139120718be046239dab",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "sites": [
     {
