@@ -1,5 +1,5 @@
 {
-  "spider": "https://file.icve.com.cn/file_doc/573/593/8F59443D53D73EF5E34581B77E3C5A15.jpg;md5;8f59443d53d73ef5e34581b77e3c5a15",
+  "spider": "https://file.icve.com.cn/file_doc/254/66/3FB1099140D04A0CDFDE755CCAFE8F62.jpg;md5;3fb1099140d04a0cdfde755ccafe8f62",
   "wallpaper": "https://深色壁纸.xxooo.cf/",
   "sites": [
     {
@@ -59,7 +59,7 @@
         "ratio": 1
       },
       "playerType": 2,
-      "searchable": 1,
+      "searchable": 0,
       "quickSearch": 0,
       "changeable": 0
     },
@@ -312,8 +312,20 @@
       }
     },
     {
+      "key": "多多",
+      "name": "🏀多多┃看球",
+      "type": 3,
+      "api": "csp_DoubaoGuard",
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0,
+      "style": {
+        "type": "list"
+      }
+    },
+    {
       "key": "超全",
-      "name": "⚽吃瓜┃看球",
+      "name": "🏐吃瓜┃看球",
       "type": 3,
       "api": "csp_LiveGzGuard",
       "searchable": 0,
@@ -643,6 +655,12 @@
       "name": "范明明（需开启V6网络）",
       "type": 0,
       "url": "https://nos.netease.com/ysf/3d75a78a0fc7ede372c03598d6d10367.m3u",
+      "playerType": 2
+    },
+    {
+      "name": "世界杯",
+      "type": 0,
+      "url": "http://82.156.243.185:33389/fwc.m3u",
       "playerType": 2
     },
     {
