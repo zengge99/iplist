@@ -1,6 +1,6 @@
 {
-  "spider": "https://file.icve.com.cn/file_doc/254/66/3FB1099140D04A0CDFDE755CCAFE8F62.jpg;md5;3fb1099140d04a0cdfde755ccafe8f62",
-  "wallpaper": "https://深色壁纸.xxooo.cf/",
+  "spider": "https://file.icve.com.cn/file_doc/774/736/C1BB8166A36306E250F791897717DEB0.jpg;md5;c1bb8166a36306e250f791897717deb0",
+  "wallpaper": "https://饭的动态壁纸.xxooo.cf/",
   "sites": [
     {
       "key": "点我切源",
