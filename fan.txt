@@ -1,5 +1,5 @@
 {
-  "spider": "https://file.icve.com.cn/file_doc/173/575/2B78FDDE3D8A434C63589BC46F1431F4.jpg;md5;2b78fdde3d8a434c63589bc46f1431f4",
+  "spider": "https://file.icve.com.cn/file_doc/213/397/357636F9E5ADD95F79FC7DE2E84A2517.jpg;md5;357636f9e5add95f79fc7de2e84a2517",
   "wallpaper": "https://饭的动态壁纸.xxooo.cf/",
   "sites": [
     {
@@ -442,18 +442,6 @@
       "name": "🌈优汐┃搜搜",
       "type": 3,
       "api": "csp_UuSsGuard",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt"
-      }
-    },
-    {
-      "key": "米搜",
-      "name": "🦋米搜┃夸嘟",
-      "type": 3,
-      "api": "csp_MIPanSoGuard",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0,
