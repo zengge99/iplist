@@ -1,5 +1,5 @@
 {
-  "spider": "https://file.icve.com.cn/file_doc/213/397/357636F9E5ADD95F79FC7DE2E84A2517.jpg;md5;357636f9e5add95f79fc7de2e84a2517",
+  "spider": "https://file.icve.com.cn/file_doc/356/881/592DC49C783D89DCDE066BF1B72AD0D3.jpg;md5;592dc49c783d89dcde066bf1b72ad0d3",
   "wallpaper": "https://饭的动态壁纸.xxooo.cf/",
   "sites": [
     {
