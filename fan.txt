@@ -1,5 +1,5 @@
 {
-  "spider": "https://zl.wpscdn.cn/2026/06/22/space_img/0e2eae28-5d76-49f5-9592-5422e5c08856.jpg;md5;1a7ffa0691e3836e78668e5f8b19f9f1",
+  "spider": "https://zl.wpscdn.cn/2026/06/27/space_img/8411e04a-42c6-4c21-830e-acf48cf57a34.jpg;md5;097bfd1388b83204958633f23eb6e4cb",
   "wallpaper": "https://饭的动态壁纸.xxooo.cf/",
   "sites": [
     {
