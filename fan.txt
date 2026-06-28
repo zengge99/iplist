@@ -1,5 +1,5 @@
 {
-  "spider": "https://zl.wpscdn.cn/2026/06/27/space_img/cec47ee4-8831-4450-94b2-525fbca928c0.jpg;md5;b651deb915a5cb34e0882cdfeffa8eef",
+  "spider": "https://zl.wpscdn.cn/2026/06/29/space_img/701df858-5fe4-4ac0-bc9a-f86a87a8cbf5.jpg;md5;0c32d054350e007ba83c2feacfc1f0ac",
   "wallpaper": "https://饭的动态壁纸.xxooo.cf/",
   "sites": [
     {
@@ -161,17 +161,6 @@
       "changeable": 1
     },
     {
-      "key": "荐片",
-      "name": "🥝荐片┃不卡",
-      "type": 3,
-      "api": "csp_JPJGuard",
-      "timeout": 10,
-      "playerType": 2,
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0
-    },
-    {
       "key": "糯米",
       "name": "🍓糯米┃秒播",
       "type": 3,
@@ -246,6 +235,17 @@
       "quickSearch": 1,
       "changeable": 1,
       "ext": "rfOX1voDIQhH8epBwpmIsuSluiuZl4+/lm1iJsy3HwNWMxpf9CY77fshI+kByoxy7DyPatUZ1jk0ty1p"
+    },
+    {
+      "key": "荐片",
+      "name": "🥝荐片┃多线",
+      "type": 3,
+      "api": "csp_JPJGuard",
+      "timeout": 10,
+      "playerType": 2,
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 0
     },
     {
       "key": "奥特",
