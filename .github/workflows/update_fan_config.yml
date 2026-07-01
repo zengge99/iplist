@@ -1,0 +1,49 @@
+name: Update Fan Config
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '5 */6 * * *' # 每6小时的第5分钟执行 (错开运行，防止git push冲突)
+
+jobs:
+  update-fan-config:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    # 注意：纯shell脚本不需要Python环境，这里直接移除了 setup-python，提高执行速度
+
+    - name: Fetch TV Config
+      run: |
+        cat << 'EOF' > fetch_fan.sh
+        touch fan.txt.bak
+        curl -kL --http1.1 'http://www.饭太硬.net/tv' -H 'User-Agent: okhttp/5.3.0' | grep -Pao "\*\*.*$" | sed 's/^\*\*//' | base64 --decode | sed 's|^\s*//.*$||g' | jq '.' > fan.txt.bak
+        if cat fan.txt.bak | grep -q "spider"; then
+          mv fan.txt.bak fan.txt
+        fi
+        EOF
+        
+        bash fetch_fan.sh
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        
+        git add fan.txt
+        if ! git diff-index --quiet HEAD --; then
+          git commit -m "Auto-update Fan TV config [skip ci]"
+          git pull --rebase origin main # 拉取最新代码防止冲突
+          git push origin HEAD:main
+          echo "Changes pushed successfully"
+        else
+          echo "No changes to commit"
+        fi

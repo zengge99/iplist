@@ -1,0 +1,90 @@
+name: Update IP List
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *' # 每6小时的第0分钟执行
+
+jobs:
+  update-ip-list:
+    runs-on: ubuntu-latest
+    
+    permissions:
+      contents: write
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: pip install requests urllib3
+
+    - name: Extract and save IP list
+      run: |
+        cat << 'EOF' > extract_ips.py
+        import requests
+        import base64
+        import re
+        from urllib.parse import unquote
+
+        def main():
+            encoded_url = "aHR0cHM6Ly9hdXRvLjg1ODY2Ni54eXovYXV0bw=="
+            url = base64.b64decode(encoded_url).decode('utf-8')
+            print(f"Fetching config from {url}...")
+            response = requests.get(url, timeout=20)
+            response.raise_for_status()
+            
+            try:
+                decoded = base64.b64decode(response.text).decode('utf-8')
+            except Exception as e:
+                print(f"Base64 decode failed: {e}")
+                exit(1)
+            
+            pattern = r'vless://[^@]*@([^:/]+)[:/]*(\d+)[^#]*#([^\s]+)'
+            matches = re.findall(pattern, decoded)
+            
+            if not matches:
+                print("Error: No server configs found")
+                exit(1)
+                
+            with open("iplist.txt", "w") as f:
+                for host, port, remark in matches:
+                    remark = unquote(remark)
+                    f.write(f"{host}:{port}#{remark}\n")
+            
+            print(f"Successfully extracted {len(matches)} servers")
+
+        if __name__ == "__main__":
+            main()
+        EOF
+
+        python extract_ips.py
+        
+        # 原始文件中注释掉的代码予以保留
+        # data="$(curl https://bestip.1996999.xyz/https://wvsvlees.sosorg.nyc.mn/SOSO | grep -oP '^[^#]*#[^🌐🐲]*' | sed 's/[[:space:]]*$//')"
+        # if [ "$data"x != x ]; then
+        #    echo "$data" > iplist.txt
+        # fi
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        
+        git add iplist.txt
+        if ! git diff-index --quiet HEAD --; then
+          git commit -m "Auto-update IP list [skip ci]"
+          git pull --rebase origin main # 拉取最新代码防止冲突
+          git push origin HEAD:main
+          echo "Changes pushed successfully"
+        else
+          echo "No changes to commit"
+        fi
