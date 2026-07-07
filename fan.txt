@@ -1,5 +1,5 @@
 {
-  "spider": "https://zl.wpscdn.cn/2026/07/04/space_img/dedbf9ed-e86e-4603-b194-5bd20df8eb4e.jpg;md5;a4a7f967a36e78f6a72ee638585a6a71",
+  "spider": "https://zl.wpscdn.cn/2026/07/07/space_img/62cbaa74-b67b-4097-b8d3-a2d169f48a0e.jpg;md5;cc4f45deda39564e41b80ba7b921718b",
   "wallpaper": "https://饭的动态壁纸.xxooo.cf/",
   "sites": [
     {
@@ -397,8 +397,8 @@
       "key": "虎牙js",
       "name": "🐯虎牙┃直播",
       "type": 3,
-      "api": "https://gh-proxy.com/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
-      "ext": "https://gh-proxy.com/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/虎牙.js",
+      "api": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/drpy2.min.js",
+      "ext": "https://git.yylx.win/https://raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/虎牙.js",
       "style": {
         "type": "rect",
         "ratio": 1.755
