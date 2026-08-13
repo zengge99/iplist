@@ -1,10 +1,10 @@
 {
-  "spider": "https://zl.wpscdn.cn/2026/08/03/space_img/31c67f10-796e-4c4b-abe7-75fd4a527cc8.jpg;md5;9d90c83bc7504392dd02c2236f08713a",
+  "spider": "https://zl.wpscdn.cn/2026/08/14/space_img/26ad8d5e-ae43-485c-ad53-b21b86ef9422.jpg;md5;46e3b3a379431c6e3060691081cd8748",
   "wallpaper": "https://饭的动态壁纸.xxooo.cf/",
   "sites": [
     {
       "key": "点我切源",
-      "name": "修复原创  厂长，新增无限线路(8月3更新)",
+      "name": "修复原创，新增无限线路(8月13更新)",
       "type": 3,
       "api": "csp_DouDouGuard",
       "indexs": 1,
@@ -640,18 +640,18 @@
   ],
   "lives": [
     {
-      "name": "develop202",
+      "name": "Kimentanm",
+      "type": 0,
+      "url": "https://gh.927223.xyz/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
+      "playerType": 2
+    },
+    {
+      "name": "develop",
       "type": 0,
       "url": "https://gh.927223.xyz/https://raw.githubusercontent.com/develop202/migu_video/refs/heads/main/interface.txt",
       "playerType": 2,
       "epg": "http://diyp5.112114.xyz/?ch={name}&date={date}",
       "logo": "https://epg.112114.xyz/logo/{name}.png"
-    },
-    {
-      "name": "Kimentanm",
-      "type": 0,
-      "url": "https://gh.927223.xyz/https://raw.githubusercontent.com/Kimentanm/aptv/master/m3u/iptv.m3u",
-      "playerType": 2
     },
     {
       "name": "范明明（需开启V6网络）",
