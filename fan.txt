@@ -1,10 +1,10 @@
 {
-  "spider": "https://zl.wpscdn.cn/2026/08/14/space_img/26ad8d5e-ae43-485c-ad53-b21b86ef9422.jpg;md5;46e3b3a379431c6e3060691081cd8748",
+  "spider": "https://zl.wpscdn.cn/2026/08/14/space_img/2ffb55be-20c6-4c49-9008-553ffbe6663b.jpg;md5;0abc42670ded8012499d2e46f2bab7b0",
   "wallpaper": "https://饭的动态壁纸.xxooo.cf/",
   "sites": [
     {
       "key": "点我切源",
-      "name": "修复原创，新增无限线路(8月13更新)",
+      "name": "<8.14更新>修复听书、ZB",
       "type": 3,
       "api": "csp_DouDouGuard",
       "indexs": 1,
@@ -102,6 +102,17 @@
       "api": "csp_NewCzGuard",
       "timeout": 10,
       "playerType": 2,
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 1
+    },
+    {
+      "key": "海绵",
+      "name": "⏮️海绵┃不卡",
+      "type": 3,
+      "api": "csp_HmysGuard",
+      "timeout": 10,
+      "playerType": "2",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1
