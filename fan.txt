@@ -1,10 +1,10 @@
 {
-  "spider": "https://zl.wpscdn.cn/2026/08/14/space_img/2ffb55be-20c6-4c49-9008-553ffbe6663b.jpg;md5;0abc42670ded8012499d2e46f2bab7b0",
+  "spider": "https://zl.wpscdn.cn/2026/08/15/space_img/d226e2c6-bf5a-4c52-bf56-4a1d0ea67487.jpg;md5;5bba0eefe56b867eaadb31af132bea70",
   "wallpaper": "https://饭的动态壁纸.xxooo.cf/",
   "sites": [
     {
       "key": "点我切源",
-      "name": "<8.14更新>修复听书、ZB",
+      "name": "<8.15更新> 修复哔哔、听书、ZB",
       "type": 3,
       "api": "csp_DouDouGuard",
       "indexs": 1,
@@ -108,7 +108,7 @@
     },
     {
       "key": "海绵",
-      "name": "⏮️海绵┃不卡",
+      "name": "🍄海绵┃不卡",
       "type": 3,
       "api": "csp_HmysGuard",
       "timeout": 10,
