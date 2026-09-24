@@ -120,9 +120,22 @@ def main():
     except FileNotFoundError:
         existing = set()
 
+    # 读当前 iplist.txt
+    try:
+        with open("iplist.txt") as f:
+            lines = [ln.rstrip("\n") for ln in f]
+    except FileNotFoundError:
+        lines = []
+
+    # ① 清掉所有旧的本来源行（#HK/#JP/#KR 结尾），只保留原始 vless 来源
+    keep = [ln for ln in lines if ln and not ln.endswith(tuple("#" + r for r in REGIONS))]
+
+    # ② 追加本轮测速前10（每地区10条）
     added = 0
-    print("[5] 追加测速前10到 iplist.txt ...")
-    with open("iplist.txt", "a") as f:
+    print("[5] 清旧+追加测速前10到 iplist.txt ...")
+    with open("iplist.txt", "w") as f:
+        for ln in keep:
+            f.write(ln + "\n")
         for r in REGIONS:
             for ip, spd in winners.get(r, []):
                 entry = f"{ip}:{PORT}#{r}"
@@ -130,7 +143,7 @@ def main():
                     f.write(entry + "\n")
                     existing.add(entry)
                     added += 1
-    print(f"[6] 新增 {added} 条 (每地区前{TOP_PER_REGION})")
+    print(f"[6] 保留原始 {len(keep)} 条，每地区新增前{TOP_PER_REGION}条（本次共{added}条新）")
 
 if __name__ == "__main__":
     main()
