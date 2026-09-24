@@ -28,6 +28,8 @@ jobs:
       run: pip install requests urllib3
 
     - name: Extract and save IP list
+      # 原 vless 来源：源不稳定时可能失败，加 continue-on-error 避免阻塞新来源追加
+      continue-on-error: true
       run: |
         cat << 'EOF' > extract_ips.py
         import requests
