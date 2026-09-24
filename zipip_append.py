@@ -124,7 +124,7 @@ def main():
     print("[5] 追加测速前10到 iplist.txt ...")
     with open("iplist.txt", "a") as f:
         for r in REGIONS:
-            for spd, ip in winners.get(r, []):
+            for ip, spd in winners.get(r, []):
                 entry = f"{ip}:{PORT}#{r}"
                 if entry not in existing:
                     f.write(entry + "\n")
