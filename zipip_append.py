@@ -12,7 +12,7 @@ SPEED_URL = f"https://{SPEED_HOST}/d/1.iso"
 SPEED_RANGE = 8 * 1024 * 1024     # 测速下载 8MB
 VERIFY_TIMEOUT = 6
 SPEED_TIMEOUT = 25
-ZIP_URL = "https://zip.cm.edu.kg/ip.zip"
+ZIP_URL = "https://xiaoya.1996999.xyz/proxy/https://zip.cm.edu.kg/ip.zip"
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
