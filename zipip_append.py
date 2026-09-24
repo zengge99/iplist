@@ -12,30 +12,37 @@ SPEED_URL = f"https://{SPEED_HOST}/d/1.iso"
 SPEED_RANGE = 8 * 1024 * 1024     # 测速下载 8MB
 VERIFY_TIMEOUT = 6
 SPEED_TIMEOUT = 25
-ZIP_URL = "https://zip.cm.edu.kg/ip.zip"
+ZIP_URLS = [
+    "https://zip.cm.edu.kg/ip.zip",                      # 原地址(可能已失效)
+    "https://zip.cm.edu.kg.cmliussss.net/ip.zip",       # 备用地址
+]
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
 
 def download():
-    attempts = [
-        lambda: urllib.request.urlopen(urllib.request.Request(ZIP_URL, headers={
-            "User-Agent": UA, "Accept": "*/*", "Accept-Encoding": "identity",
-            "Referer": "https://zip.cm.edu.kg/"}), timeout=60).read(),
-        lambda: urllib.request.urlopen(ZIP_URL, timeout=60).read(),
-        lambda: subprocess.run(["curl", "-sL", "-m", "60", "-A", UA,
-                                "-H", "Referer: https://zip.cm.edu.kg/", ZIP_URL],
-                               capture_output=True, timeout=70).stdout,
-    ]
+    # 多源依次尝试：原地址 → 备用地址；每个 URL 内再尝试多种请求方式（应对反爬/超时）
     last = None
-    for fn in attempts:
-        try:
-            b = fn()
-            if b and len(b) > 1000 and b[:2] == b"PK":
-                return b
-            last = f"bad payload (len={len(b) if b else 0})"
-        except Exception as e:
-            last = f"{type(e).__name__}: {e}"
+    for url in ZIP_URLS:
+        referer = "/".join(url.split("/")[:3]) + "/"
+        attempts = [
+            lambda u=url, r=referer: urllib.request.urlopen(urllib.request.Request(u, headers={
+                "User-Agent": UA, "Accept": "*/*", "Accept-Encoding": "identity",
+                "Referer": r}), timeout=60).read(),
+            lambda u=url: urllib.request.urlopen(u, timeout=60).read(),
+            lambda u=url, r=referer: subprocess.run(["curl", "-sL", "-m", "60", "-A", UA,
+                                    "-H", f"Referer: {r}", u],
+                                   capture_output=True, timeout=70).stdout,
+        ]
+        for fn in attempts:
+            try:
+                b = fn()
+                if b and len(b) > 1000 and b[:2] == b"PK":
+                    print(f"   [源] {url} OK ({len(b)} bytes)")
+                    return b
+                last = f"{url} -> bad payload (len={len(b) if b else 0})"
+            except Exception as e:
+                last = f"{url} -> {type(e).__name__}: {e}"
     raise RuntimeError(f"download failed: {last}")
 
 # 联通性: curl 指定IP访问 www.cloudflare.com
