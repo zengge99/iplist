@@ -77,6 +77,8 @@ jobs:
         # fi
 
     - name: Append HK/JP/KR IPs from zip.cm.edu.kg
+      # runner 网络可能反爬导致下载 403，加容错避免阻塞原来源提交
+      continue-on-error: true
       run: |
         # 从 zip.cm.edu.kg 下载 IP 列表，提取 443 端口 HK/JP/KR 地址，
         # 100 线程 curl 指定 IP 访问 www.cloudflare.com 验证联通性，

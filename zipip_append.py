@@ -7,13 +7,39 @@ HOST = "www.cloudflare.com"
 TIMEOUT = 6
 ZIP_URL = "https://zip.cm.edu.kg/ip.zip"
 
-# 1) 下载
+# 浏览器 UA + 跟随重定向，降低被 403/反爬拦截概率
+UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
+
+def download():
+    # 多级回退，提高在 GH runner/IP 受限环境下的成功率
+    attempts = [
+        # 1) urllib + 浏览器 UA
+        lambda: urllib.request.urlopen(urllib.request.Request(ZIP_URL, headers={
+            "User-Agent": UA, "Accept": "*/*", "Accept-Encoding": "identity",
+            "Referer": "https://zip.cm.edu.kg/"}), timeout=60).read(),
+        # 2) urllib 普通 UA
+        lambda: urllib.request.urlopen(ZIP_URL, timeout=60).read(),
+        # 3) curl CLI（走真实 HTTP 栈，跟随重定向）
+        lambda: subprocess.run(["curl", "-sL", "-m", "60", "-A", UA,
+                                "-H", "Referer: https://zip.cm.edu.kg/", ZIP_URL],
+                               capture_output=True, timeout=70).stdout,
+    ]
+    last = None
+    for fn in attempts:
+        try:
+            b = fn()
+            if b and len(b) > 1000 and b[:2] == b"PK":
+                return b
+            last = f"bad payload (len={len(b) if b else 0})"
+        except Exception as e:
+            last = f"{type(e).__name__}: {e}"
+    raise RuntimeError(f"download failed: {last}")
+
 print("[1] 下载 zip.cm.edu.kg/ip.zip ...")
-req = urllib.request.Request(ZIP_URL, headers={"User-Agent": "curl/8"})
-data = urllib.request.urlopen(req, timeout=40).read()
+data = download()
 zf = zipfile.ZipFile(io.BytesIO(data))
 
-# 2) 提取 443/HK,JP,KR
 ips_by_region = {}
 for r in REGIONS:
     name = f"443/{r}.txt"
@@ -27,15 +53,13 @@ for r in REGIONS:
     ips_by_region[r] = lst
     print(f"[2] {name}: {len(lst)} IPs")
 
-# 3) 100线程 curl 验证
 def check(ip):
     try:
         out = subprocess.run(
             ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}", "-m", str(TIMEOUT),
              "--resolve", f"{HOST}:{PORT}:{ip}", f"https://{HOST}/"],
             capture_output=True, text=True, timeout=TIMEOUT + 3)
-        code = out.stdout.strip()
-        return ip, code.startswith(("2", "3", "4"))
+        return ip, out.stdout.strip().startswith(("2", "3", "4"))
     except Exception:
         return ip, False
 
@@ -51,8 +75,6 @@ for r in REGIONS:
     for ip in ok:
         good.append(f"{ip}:{PORT}#{r}")
 
-# 4) 追加到 iplist.txt（去重）
-print(f"[4] 联通 {len(good)} 条，准备追加去重 ...")
 try:
     existing = set()
     with open("iplist.txt") as f:
@@ -69,4 +91,4 @@ with open("iplist.txt", "a") as f:
             f.write(entry + "\n")
             existing.add(entry)
             added += 1
-print(f"[5] 新增 {added} 条，原有 {len(good)-added} 条已存在/跳过")
+print(f"[5] 新增 {added} 条，原有 {len(good)-added} 已存在/跳过")
