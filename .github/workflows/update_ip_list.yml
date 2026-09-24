@@ -3,7 +3,7 @@ name: Update IP List
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */6 * * *' # 每6小时的第0分钟执行
+    - cron: '0 0 * * *' # 每天 UTC 0:00 执行
 
 jobs:
   update-ip-list:
