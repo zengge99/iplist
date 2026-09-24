@@ -110,17 +110,7 @@ def main():
         print(f"   {r}: 测速前{TOP_PER_REGION} -> " +
               ", ".join(f"{ip}={spd/1e6:.1f}MB/s" for ip, spd in top))
 
-    # ③ 追加到 iplist.txt（去重）
-    try:
-        existing = set()
-        with open("iplist.txt") as f:
-            for line in f:
-                if line.strip():
-                    existing.add(line.strip())
-    except FileNotFoundError:
-        existing = set()
-
-    # 读当前 iplist.txt
+    # ③ 读当前 iplist.txt 全部行
     try:
         with open("iplist.txt") as f:
             lines = [ln.rstrip("\n") for ln in f]
@@ -130,20 +120,17 @@ def main():
     # ① 清掉所有旧的本来源行（#HK/#JP/#KR 结尾），只保留原始 vless 来源
     keep = [ln for ln in lines if ln and not ln.endswith(tuple("#" + r for r in REGIONS))]
 
-    # ② 追加本轮测速前10（每地区10条）
-    added = 0
-    print("[5] 清旧+追加测速前10到 iplist.txt ...")
+    # ② 无条件写入本轮测速前10（每地区10条）；region 行格式与 vless 域名行不冲突，无需去重
+    print("[5] 清旧+写入测速前10到 iplist.txt ...")
     with open("iplist.txt", "w") as f:
         for ln in keep:
             f.write(ln + "\n")
+        written = 0
         for r in REGIONS:
             for ip, spd in winners.get(r, []):
-                entry = f"{ip}:{PORT}#{r}"
-                if entry not in existing:
-                    f.write(entry + "\n")
-                    existing.add(entry)
-                    added += 1
-    print(f"[6] 保留原始 {len(keep)} 条，每地区新增前{TOP_PER_REGION}条（本次共{added}条新）")
+                f.write(f"{ip}:{PORT}#{r}\n")
+                written += 1
+    print(f"[6] 保留原始 {len(keep)} 条，本次写入 {written} 条（每地区{TOP_PER_REGION}）")
 
 if __name__ == "__main__":
     main()
