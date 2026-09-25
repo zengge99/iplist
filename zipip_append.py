@@ -1,6 +1,6 @@
 import io, zipfile, re, subprocess, concurrent.futures, urllib.request
 
-REGIONS = ["HK", "JP", "KR"]
+REGIONS = ["HK", "JP", "KR", "TW", "SG"]
 PORT = 443
 THREADS = 100            # 联通性验证并发
 SPEED_THREADS = 5        # 测速并发
