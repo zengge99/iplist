@@ -85,6 +85,26 @@ jobs:
         # 联通的以 ip:443#地区 格式追加到 iplist.txt（保留原有来源）
         python zipip_append.py
 
+    - name: Pin 优选中转 as first entry
+      # 固定条目置顶。必须放在两个生成步骤之后：
+      # 上面的 extract 是 open(...,"w") 整体覆盖，zipip_append.py 也会重写文件，
+      # 提前写入会被抹掉。这里做去重 + 置顶，幂等。
+      run: |
+        python - <<'PY'
+        PIN = "third-cf.zngle.de5.net:443#优选中转"
+        try:
+            with open("iplist.txt") as f:
+                lines = f.read().splitlines()
+        except FileNotFoundError:
+            lines = []
+        keep = [ln.strip() for ln in lines if ln.strip() and ln.strip() != PIN]
+        with open("iplist.txt", "w") as f:
+            f.write(PIN + "\n")
+            for ln in keep:
+                f.write(ln + "\n")
+        print(f"[pin] 置顶 {PIN} | 保留其余 {len(keep)} 条")
+        PY
+
     - name: Commit and push changes
       run: |
         git config --global user.name "GitHub Actions"
