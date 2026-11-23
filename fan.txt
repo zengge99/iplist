@@ -4,7 +4,7 @@
   "sites": [
     {
       "key": "点我切源",
-      "name": "豆豆┃片单 <Fix所有>",
+      "name": "豆豆┃片单 <修复扫码Bug>",
       "type": 3,
       "api": "csp_DouDouGuard",
       "indexs": 1,
